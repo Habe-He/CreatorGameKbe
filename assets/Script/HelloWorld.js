@@ -14,10 +14,10 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.label.string = this.text;
-        KBEngine.app.player().reqServerTest();
-        console.log("调用服务器函数");
+        // KBEngine.app.player().reqServerTest();
+        // console.log("调用服务器函数");
 
-        KBEngine.Event.register("HelloWorld_onHello", this, "HelloWorld_onHello");
+        // KBEngine.Event.register("HelloWorld_onHello", this, "HelloWorld_onHello");
     },
     
     HelloWorld_onHello: function() {
