@@ -17,8 +17,8 @@ cc.Class({
     },
 
     onLoad: function () {
-        new GUIDebugLayer();
-        this.addChild(GUIDebugLayer.debug, 100);
+        // new GUIDebugLayer();
+        // this.addChild(GUIDebugLayer.debug, 100);
 
         this.button_login.node.on('click', this.login_callback, this);
         this.button_register.node.on('click', this.register_callback, this);
@@ -31,19 +31,19 @@ cc.Class({
     },
 
     login_callback: function (event) {
-        GUIDebugLayer.debug.INFO_MSG("Connect to server...");
-        // KBEngine.Event.fire("login", this.editBoxName.string, this.editBoxPwd.string, "kbengine_cocos_creator_demo");
+        // GUIDebugLayer.debug.INFO_MSG("Connect to server...");
+        KBEngine.Event.fire("login", this.editBoxName.string, this.editBoxPwd.string, "kbengine_cocos_creator_demo");
         console.log("Button Login");
     },
 
     register_callback: function(event) {
-        GUIDebugLayer.debug.INFO_MSG("Connect to server...");
-        // KBEngine.Event.fire("createAccount", this.editBoxName.string, this.editBoxPwd.string, "kbengine_cocos_creator_demo");
+        // GUIDebugLayer.debug.INFO_MSG("Connect to server...");
+        KBEngine.Event.fire("createAccount", this.editBoxName.string, this.editBoxPwd.string, "kbengine_cocos_creator_demo");
     },
 
     onLoginSuccess : function() {
         console.log("登录成功");
-        // cc.director.loadScene("helloworld");
+        cc.director.loadScene("helloworld");
 	},
 
     // called every frame, uncomment this function to activate update callback
